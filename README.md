@@ -61,3 +61,57 @@ test_automation_ui/
 ├── README.md
 ├── sample.png
 └── other required project files
+---
+
+## Prerequisites
+
+Before running the test, make sure Python is installed on your computer.
+
+To check whether Python is installed, run:
+
+python --version
+
+If Python is not recognized, install Python and make sure to select:
+
+Add python.exe to PATH
+
+If the python command does not work, try:
+
+py --version
+Installation and Running Instructions
+1. Open the Project Folder
+
+Open Command Prompt and navigate to the project folder:
+
+cd /d D:\test_automation_ui
+2. Install Required Dependencies
+
+Run the following commands one by one:
+
+python -m pip install -U pip
+python -m pip install playwright openpyxl
+python -m playwright install
+
+If the python command does not work, use py instead:
+
+py -m pip install -U pip
+py -m pip install playwright openpyxl
+py -m playwright install
+3. Run the Automated Test
+
+Run the following command inside the project folder:
+
+python image_preview_test.py --url "https://www.pixelssuite.com/convert-to-png" --slow-mo-ms 2000
+
+If the python command does not work, use:
+
+py image_preview_test.py --url "https://www.pixelssuite.com/convert-to-png" --slow-mo-ms 2000
+4. Check the Test Result
+
+After the test execution is completed, the result will be recorded in:
+
+execution_results.csv
+
+The CSV file contains the test case ID, feature tested, expected output, actual output, and test status.
+
+
