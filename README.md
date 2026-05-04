@@ -4,9 +4,7 @@
 
 This project contains a Playwright automation test created for **IT3040 – ITPM Assignment 1, Option 2: Functional and Usability Testing of a Website**.
 
-The selected website for testing is **PixelsSuite**:
-
-https://www.pixelssuite.com/
+The selected website for testing is **PixelsSuite**: https://www.pixelssuite.com/
 
 The automation test verifies the **preview functionality** of an image-related feature by uploading a valid PNG image and checking whether the image is displayed correctly in the preview section.
 
@@ -61,6 +59,8 @@ test_automation_ui/
 ├── README.md
 ├── sample.png
 └── other required project files
+```
+
 ---
 
 ## Prerequisites
@@ -69,49 +69,57 @@ Before running the test, make sure Python is installed on your computer.
 
 To check whether Python is installed, run:
 
+```bash
 python --version
+```
 
-If Python is not recognized, install Python and make sure to select:
+If Python is not recognized, install Python and make sure to select **"Add python.exe to PATH"** during installation.
 
-Add python.exe to PATH
+If the `python` command does not work, try:
 
-If the python command does not work, try:
-
+```bash
 py --version
-Installation and Running Instructions
-1. Open the Project Folder
+```
+
+---
+
+## Installation and Setup
+
+### 1. Open the Project Folder
 
 Open Command Prompt and navigate to the project folder:
 
+```bash
 cd /d D:\test_automation_ui
-2. Install Required Dependencies
+```
+
+### 2. Install Required Dependencies
 
 Run the following commands one by one:
 
+```bash
 python -m pip install -U pip
 python -m pip install playwright openpyxl
 python -m playwright install
+```
 
-If the python command does not work, use py instead:
+> **Note:** If the `python` command does not work, replace `python` with `py` in all commands above.
 
-py -m pip install -U pip
-py -m pip install playwright openpyxl
-py -m playwright install
-3. Run the Automated Test
+---
+
+## Running the Test
 
 Run the following command inside the project folder:
 
+```bash
 python image_preview_test.py --url "https://www.pixelssuite.com/convert-to-png" --slow-mo-ms 2000
+```
 
-If the python command does not work, use:
+> **Note:** If the `python` command does not work, use `py` instead:
+>
+> ```bash
+> py image_preview_test.py --url "https://www.pixelssuite.com/convert-to-png" --slow-mo-ms 2000
+> ```
 
-py image_preview_test.py --url "https://www.pixelssuite.com/convert-to-png" --slow-mo-ms 2000
-4. Check the Test Result
-
-After the test execution is completed, the result will be recorded in:
-
-execution_results.csv
-
-The CSV file contains the test case ID, feature tested, expected output, actual output, and test status.
-
+---
 
